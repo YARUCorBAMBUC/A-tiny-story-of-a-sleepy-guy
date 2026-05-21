@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Ingrid+Darling&family=Inspiration&family=Instrument+Sans&family=Inter:wght@400;700&family=Island+Moments&display=swap');
+
+/*Якась шляпа*/
+body, html { 
+    margin: 0; padding: 0; width: 100%; height: 100%; 
+    background-color: #ffffff; overflow-x: hidden; 
+}
+* { box-sizing: border-box; }
+p, h1, h2 { margin: 0; }
+
+/*Компутор*/
+@media (min-width: 769px) {
+    .mobile-version { display: none !important; }
+    .home { 
+        background-color: #ffffff; overflow-x: hidden; width: 100%; 
+        min-width: 1440px; min-height: 1024px; display: flex; flex-direction: column; position: relative; 
+    }
+    .home .header { 
+        width: 100%; height: 206px; display: flex; flex-direction: row; padding: 74px 122px; 
+        background-color: #d9d9d9; 
+    }
+    .home .nav-buts { display: flex; gap: 34px; height: 57px; }
+    .home .nav-link { 
+        text-decoration: none; width: 212px; height: 57px; display: flex; 
+        background-color: #fffef6; border: none; align-items: center; justify-content: center; 
+        font-family: 'Island Moments', cursive; font-size: 48px; color: #000000; 
+    }
+    .home .nav-link.active { border: 5px solid #000000; }
+    .home .main-body { width: 100%; height: 818px; position: relative; }
+    .home .sider { 
+        position: absolute; top: 0; left: 0; width: 243px; height: 818px; background-color: #c0bcbc; 
+    }
+    .home .random-thing { 
+        position: absolute; top: 126px; left: 0; width: 241px; height: 533px; 
+        background-color: #d9d9d9; padding: 44px 18px; 
+    }
+    .home .p { font-family: 'Inspiration', cursive; font-size: 96px; color: #000000; line-height: 1; }
+    .home .sider-small { font-family: 'Ingrid Darling', cursive; font-size: 96px; color: #000000; line-height: 1; margin-top: 20px;}
+    .home .main { 
+        position: absolute; top: 0; left: 243px; right: 0; height: 681px; 
+        background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%), #d9d9d9; 
+        padding: 40px; overflow-y: auto;
+    }
+    .home .main-text { 
+        font-family: 'Instrument Sans', sans-serif; font-size: 39px; color: #000000; 
+        white-space: pre-line; line-height: 1.3;
+    }
+    .home .footer { 
+        top: 681px; left: 243px; right: 0; position: absolute; height: 137px; 
+        background-color: #d9d9d9; display: flex; align-items: center; padding-left: 50px; 
+    }
+    .home .text-wrapper-2 { font-family: 'Inspiration', cursive; font-size: 96px; color: #000000; }
+}
+
+/*Мобыльник*/
+@media (max-width: 768px) {
+    .desktop-version { display: none !important; }
+    .m-home { 
+        background-color: #ffffff; width: 100%; min-height: 100vh; position: relative; 
+        display: flex; flex-direction: column; overflow-x: hidden;
+    }
+    .m-home .header { 
+        width: 100%; height: 100px; background-color: #d9d9d9; display: flex; align-items: center; padding: 0 20px; 
+    }
+    .m-home .text-wrapper { font-family: 'Inter', sans-serif; font-size: 30px; color: #000000; }
+    .m-home .button-side { 
+        position: absolute; top: 20px; right: 20px; width: 60px; height: 60px; 
+        display: flex; flex-direction: column; gap: 8px; background-color: #958f8f; border: 0; 
+        cursor: pointer; justify-content: center; align-items: center; z-index: 10; 
+    }
+    .m-home .button-side span { width: 40px; height: 7px; background-color: #d9d9d9; display: block; }
+    .m-home .main-BG { background-color: #bfbfbf; padding: 30px 20px; flex: 1; overflow-y: auto; }
+    .m-home .mobile-text { 
+        font-family: 'Inter', sans-serif; font-size: 24px; color: #000000; line-height: 1.4; white-space: pre-line; 
+    }
+    .m-home .footer { 
+        width: 100%; height: 86px; background-color: #d9d9d9; display: flex; align-items: center; padding-left: 20px; 
+    }
+    .m-home .here-s-some-random { font-family: 'Inter', sans-serif; font-size: 24px; color: #000000; }
+
+    /* БІЧНЕ МЕНЮ */
+    .menu-overlay { 
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); 
+        z-index: 99; display: none; 
+    }
+    .sidemenu { 
+        position: fixed; top: 0; right: -100%; width: 320px; height: 100%; background-color: #b5b5b5; 
+        z-index: 100; transition: right 0.3s ease-in-out; padding: 20px; display: flex; flex-direction: column; 
+    }
+    .sidemenu.open { right: 0; }
+    .sidemenu .close-btn { 
+        align-self: flex-end; width: 60px; height: 60px; background-color: #958f8f; border: 0; 
+        cursor: pointer; position: relative; margin-bottom: 20px; 
+    }
+    .sidemenu .close-btn span { 
+        position: absolute; top: 26px; left: 5px; width: 50px; height: 7px; background-color: #d9d9d9; display: block; 
+    }
+    .sidemenu .close-btn span.one { transform: rotate(-45deg); }
+    .sidemenu .close-btn span.two { transform: rotate(45deg); }
+    .sidemenu .group { 
+        width: 100%; height: 50px; background-color: #d9d9d9; border: 2px solid #000000; margin-bottom: 12px; 
+        display: flex; align-items: center; padding-left: 15px; text-decoration: none; color: #000000; 
+        font-family: 'Inter', sans-serif; font-size: 20px; font-weight: bold; 
+    }
+}

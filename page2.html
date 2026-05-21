@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home 2 - Collapse Protocol</title>
+    <style>
+        /* Запобігання смикання інтерфейсу при завантаженні сторінки */
+        @media (max-width: 768px) { .desktop-version { display: none !important; } }
+        @media (min-width: 769px) { .mobile-version { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Компутор -->
+    <div class="desktop-version home">
+        <header class="header">
+            <nav class="nav-buts">
+                <a class="nav-link " href="index.html">Home</a>
+                <a class="nav-link active" href="page2.html">Home2</a>
+                <a class="nav-link " href="page3.html">Home3</a>
+                <a class="nav-link " href="page4.html">Home4</a>
+                <a class="nav-link " href="page5.html">Home5</a>
+            </nav>
+        </header>
+        <div class="main-body">
+            <aside class="sider">
+                <div class="random-thing">
+                    <p class="p">Sider</p>
+                    <p class="sider-small">Some random text bruh</p>
+                </div>
+            </aside>
+            <main class="main">
+                <p class="main-text">AND SOMEHOW YOU'RE
+STILL SCROLLING
+THIS WEIRD LITTLE WEBSITE!!!!!
+
+The lights are flickering...
+The coffee is cold...
+And the developer probably
+forgot to sleep again.
+Human dedication is a medically fascinating
+phenomenon.</p>
+            </main>
+            <footer class="footer"><p class="text-wrapper-2">Some random test bruh</p></footer>
+        </div>
+    </div>
+
+    <!-- Мобільний -->
+    <div class="mobile-version m-home">
+        <header class="header">
+            <div class="text-wrapper">Collapse Protocol</div>
+            <button class="button-side" onclick="toggleMenu(true)">
+                <span></span><span></span><span></span>
+            </button>
+        </header>
+        <main class="main-BG">
+            <p class="mobile-text">THE SYSTEM CONTINUED
+TO COLLAPSE
+IN SMALL, CREATIVE WAYS!!!!!
+
+Every notification sounded more
+threatening than the last
+
+Emails arrived with titles like
+"URGENT," "FOLLOW-UP" and the
+especially terrifying "Quick Question"
+
+The rain outside intensified,
+hammering against the glass while
+error logs multiplied across the
+screens like some kind of digital
+infection.
+
+One by one, team members began
+quietly blaming each other in
+increasingly polite corporate
+language, humanity's favorite method
+of psychological warfare.
+
+Meanwhile, the main server
+continued blinking calmly, almost
+mockingly, as though it already knew
+exactly which line of code had
+doomed them all
+
+But naturally, it refused to tell
+anyone</p>
+        </main>
+        <footer class="footer"><p class="here-s-some-random">Here's some random text<br>for some random purpose</p></footer>
+
+        <!-- Мобільне бічне меню -->
+        <div class="menu-overlay" id="overlay" onclick="toggleMenu(false)"></div>
+        <nav class="sidemenu" id="menu">
+            <button class="close-btn" onclick="toggleMenu(false)">
+                <span class="one"></span><span class="two"></span>
+            </button>
+            <a class="group" href="index.html">Rainy Boot Sequence</a>
+            <a class="group" href="page2.html">Collapse Protocol</a>
+            <a class="group" href="page3.html">Blue Light Hours</a>
+            <a class="group" href="page4.html">Silent Recovery</a>
+            <a class="group" href="page5.html">After The Storm</a>
+        </nav>
+    </div>
+
+    <script>
+        function toggleMenu(open) {
+            document.getElementById('menu').classList.toggle('open', open);
+            document.getElementById('overlay').style.display = open ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

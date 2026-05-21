@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home 3 - Blue Light Hours</title>
+    <style>
+        /* Запобігання смикання інтерфейсу при завантаженні сторінки */
+        @media (max-width: 768px) { .desktop-version { display: none !important; } }
+        @media (min-width: 769px) { .mobile-version { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Компутор -->
+    <div class="desktop-version home">
+        <header class="header">
+            <nav class="nav-buts">
+                <a class="nav-link " href="index.html">Home</a>
+                <a class="nav-link " href="page2.html">Home2</a>
+                <a class="nav-link active" href="page3.html">Home3</a>
+                <a class="nav-link " href="page4.html">Home4</a>
+                <a class="nav-link " href="page5.html">Home5</a>
+            </nav>
+        </header>
+        <div class="main-body">
+            <aside class="sider">
+                <div class="random-thing">
+                    <p class="p">Sider</p>
+                    <p class="sider-small">Some random text bruh</p>
+                </div>
+            </aside>
+            <main class="main">
+                <p class="main-text">THE PAGE KEEPS
+GETTING LONGER
+FOR ABSOLUTELY NO REASON!!!!!
+
+A mysterious button appeared.
+Nobody pressed it.
+Nobody trusts it.
+Somewhere in the distance
+Yet somehow it hums quietly
+like it knows your search history.
+Terrifying architecture. Very modern.
+Nature is healing.</p>
+            </main>
+            <footer class="footer"><p class="text-wrapper-2">Some random test bruh</p></footer>
+        </div>
+    </div>
+
+    <!-- Мобільний -->
+    <div class="mobile-version m-home">
+        <header class="header">
+            <div class="text-wrapper">Blue Light Hours</div>
+            <button class="button-side" onclick="toggleMenu(true)">
+                <span></span><span></span><span></span>
+            </button>
+        </header>
+        <main class="main-BG">
+            <p class="mobile-text">HOURS PASSED
+INSIDE THE BLUE GLOW
+OF THE MONITORS!!!!!
+
+The office no longer felt real
+
+It had transformed into that strange
+state every programmer eventually
+discovers around 3 AM, where time
+stops behaving correctly and every
+bug begins feeling personal
+
+Someone claimed the fix was
+simple.
+
+That person was immediately
+distrusted by everyone in the room
+
+A keyboard clacked endlessly
+somewhere in the darkness while
+unfinished tasks piled higher and
+higher like digital ruins of abandoned
+optimism
+
+And still the storm continued
+outside, wrapping the city in gray
+static while the machines consumed
+another piece of everyone's
+remaining sanity</p>
+        </main>
+        <footer class="footer"><p class="here-s-some-random">Here's some random text<br>for some random purpose</p></footer>
+
+        <!-- Мобільне бічне меню -->
+        <div class="menu-overlay" id="overlay" onclick="toggleMenu(false)"></div>
+        <nav class="sidemenu" id="menu">
+            <button class="close-btn" onclick="toggleMenu(false)">
+                <span class="one"></span><span class="two"></span>
+            </button>
+            <a class="group" href="index.html">Rainy Boot Sequence</a>
+            <a class="group" href="page2.html">Collapse Protocol</a>
+            <a class="group" href="page3.html">Blue Light Hours</a>
+            <a class="group" href="page4.html">Silent Recovery</a>
+            <a class="group" href="page5.html">After The Storm</a>
+        </nav>
+    </div>
+
+    <script>
+        function toggleMenu(open) {
+            document.getElementById('menu').classList.toggle('open', open);
+            document.getElementById('overlay').style.display = open ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

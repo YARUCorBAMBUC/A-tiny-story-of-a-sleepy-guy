@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home 4 - Silent Recovery</title>
+    <style>
+        /* Запобігання смикання інтерфейсу при завантаженні сторінки */
+        @media (max-width: 768px) { .desktop-version { display: none !important; } }
+        @media (min-width: 769px) { .mobile-version { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Компутор -->
+    <div class="desktop-version home">
+        <header class="header">
+            <nav class="nav-buts">
+                <a class="nav-link " href="index.html">Home</a>
+                <a class="nav-link " href="page2.html">Home2</a>
+                <a class="nav-link " href="page3.html">Home3</a>
+                <a class="nav-link active" href="page4.html">Home4</a>
+                <a class="nav-link " href="page5.html">Home5</a>
+            </nav>
+        </header>
+        <div class="main-body">
+            <aside class="sider">
+                <div class="random-thing">
+                    <p class="p">Sider</p>
+                    <p class="sider-small">Some random text bruh</p>
+                </div>
+            </aside>
+            <main class="main">
+                <p class="main-text">SO NOW WE'RE
+WALKING THROUGH
+DIGITAL CORRIDORS I GUESS!!!!!
+
+The air smells like overheated GPUs
+and poor life decisions.
+an error message screams softly
+into the eternal void of frontend development.</p>
+            </main>
+            <footer class="footer"><p class="text-wrapper-2">Some random test bruh</p></footer>
+        </div>
+    </div>
+
+    <!-- Мобільний -->
+    <div class="mobile-version m-home">
+        <header class="header">
+            <div class="text-wrapper">Silent Recovery</div>
+            <button class="button-side" onclick="toggleMenu(true)">
+                <span></span><span></span><span></span>
+            </button>
+        </header>
+        <main class="main-BG">
+            <p class="mobile-text">THEN SOMETHING CHANGED
+VERY QUIETLY
+ALMOST IMPERCEPTIBLY
+
+One error disappeared
+
+Then another
+
+The endless walls of red text slowly
+gave way to clean lines, stable
+outputs, successful responses.
+
+Nobody celebrated at first because
+programmers are deeply
+superstitious creatures, broken by
+years of false hope and
+undocumented features
+
+But slowly, cautiously, exhausted
+eyes began lifting toward the screens
+again.
+
+The server room no longer sounded
+angry.
+
+For the first time all night, the office
+became quiet enough to hear the rain
+weakening outside</p>
+        </main>
+        <footer class="footer"><p class="here-s-some-random">Here's some random text<br>for some random purpose</p></footer>
+
+        <!-- Мобільне бічне меню -->
+        <div class="menu-overlay" id="overlay" onclick="toggleMenu(false)"></div>
+        <nav class="sidemenu" id="menu">
+            <button class="close-btn" onclick="toggleMenu(false)">
+                <span class="one"></span><span class="two"></span>
+            </button>
+            <a class="group" href="index.html">Rainy Boot Sequence</a>
+            <a class="group" href="page2.html">Collapse Protocol</a>
+            <a class="group" href="page3.html">Blue Light Hours</a>
+            <a class="group" href="page4.html">Silent Recovery</a>
+            <a class="group" href="page5.html">After The Storm</a>
+        </nav>
+    </div>
+
+    <script>
+        function toggleMenu(open) {
+            document.getElementById('menu').classList.toggle('open', open);
+            document.getElementById('overlay').style.display = open ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

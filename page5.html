@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home 5 - After The Storm</title>
+    <style>
+        /* Запобігання смикання інтерфейсу при завантаженні сторінки */
+        @media (max-width: 768px) { .desktop-version { display: none !important; } }
+        @media (min-width: 769px) { .mobile-version { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Компутор -->
+    <div class="desktop-version home">
+        <header class="header">
+            <nav class="nav-buts">
+                <a class="nav-link " href="index.html">Home</a>
+                <a class="nav-link " href="page2.html">Home2</a>
+                <a class="nav-link " href="page3.html">Home3</a>
+                <a class="nav-link " href="page4.html">Home4</a>
+                <a class="nav-link active" href="page5.html">Home5</a>
+            </nav>
+        </header>
+        <div class="main-body">
+            <aside class="sider">
+                <div class="random-thing">
+                    <p class="p">Sider</p>
+                    <p class="sider-small">Some random text bruh</p>
+                </div>
+            </aside>
+            <main class="main">
+                <p class="main-text">FINAL PAGE!!!
+YOU ACTUALLY
+MADE IT THIS FAR!!!!!!
+
+The machine calms down.
+The screen stops shaking.
+A single notification appears:
+"Reward unavailable. Try again later."
+And honestly?
+That's the most realistic ending possible.</p>
+            </main>
+            <footer class="footer"><p class="text-wrapper-2">Some random test bruh</p></footer>
+        </div>
+    </div>
+
+    <!-- Мобільний -->
+    <div class="mobile-version m-home">
+        <header class="header">
+            <div class="text-wrapper">After The Storm</div>
+            <button class="button-side" onclick="toggleMenu(true)">
+                <span></span><span></span><span></span>
+            </button>
+        </header>
+        <main class="main-BG">
+            <p class="mobile-text">AND THROUGH THE CLOUDS
+A THIN BEAM OF LIGHT
+FINALLY APPEARED
+
+Morning sunlight slipped carefully
+through the windows, stretching
+across dusty desks and flickering
+monitors like the world itself was
+attempting an apology..
+
+The storm outside had begun to
+fade, leaving only scattered drops
+against the glass and the soft hum of
+machines finally working together
+Instead of actively plotting revenge.
+
+Someone pushed the final
+deployment button
+
+The system held.
+
+No crashes. No alarms. No
+Catastrophic database corruption.
+
+Just silence
+
+Beautiful, impossible silence
+
+And for one brief moment, in that
+tiny forgotten office full of exhausted
+developers and overheated
+hardware, everything worked exactly
+the way it was supposed to.
+
+Which, statistically speaking, was
+nothing short of a miracle</p>
+        </main>
+        <footer class="footer"><p class="here-s-some-random">Here's some random text<br>for some random purpose</p></footer>
+
+        <!-- Мобільне бічне меню -->
+        <div class="menu-overlay" id="overlay" onclick="toggleMenu(false)"></div>
+        <nav class="sidemenu" id="menu">
+            <button class="close-btn" onclick="toggleMenu(false)">
+                <span class="one"></span><span class="two"></span>
+            </button>
+            <a class="group" href="index.html">Rainy Boot Sequence</a>
+            <a class="group" href="page2.html">Collapse Protocol</a>
+            <a class="group" href="page3.html">Blue Light Hours</a>
+            <a class="group" href="page4.html">Silent Recovery</a>
+            <a class="group" href="page5.html">After The Storm</a>
+        </nav>
+    </div>
+
+    <script>
+        function toggleMenu(open) {
+            document.getElementById('menu').classList.toggle('open', open);
+            document.getElementById('overlay').style.display = open ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
